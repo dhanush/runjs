@@ -1,5 +1,6 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  form#code_form(action='/execute', method='post')
+    textarea(placeholder='Enter Your JS Code', cols='50', rows='5', name='code')
+    button(type='submit', value='Submit') Submit Code
